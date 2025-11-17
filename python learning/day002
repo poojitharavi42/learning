@@ -1,0 +1,23 @@
+my_string="Hello World"
+stripped_string=my_string.strip()
+print("Stripped String:",stripped_string)
+lower_string=my_string.lower()
+print("lower String:",lower_string)
+upper_string=my_string.upper()
+print("Upper String:",upper_string)
+replaced_string=my_string.replace("World","Python")
+print("Replaced String:",replaced_string)
+name=my_string.split("")
+print("Splitted string:",name)
+joined_string=my_string.join(name)
+print("Joined String:",joined_string)
+index_of_hello=my_string.find("Hello")
+print("Index of Hello:",index_of_hello)
+starts_with_hello=my_string.startswith("Hello")
+print("Starts with hello:",starts_with_hello)
+ends_with_world=my_string.endswith("World")
+print("Ends with world:",ends_with_world)
+count_l=my_string.count("l")
+print("Count of l:",count_l)
+
+   
