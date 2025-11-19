@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-image: url('https://img.freepik.com/free-photo/airplane_74190-463.jpg');
+}
+
+h1{
+    background-color: skyblue;
+    color: white;
+    padding-top: 25px;
+    text-align: center;
+    
+}
+h1,ul,li{
+    display: inline-block;
+}
+ul{
+    margin-left: 60%;
+    color: white;
+    cursor: pointer;
+}
+li:hover{
+    color:black
+}
+.booking form{
+    position:absolute
+}
+.booking form{
+    border:black;
+    border-radius: 200px;
+    padding-top: 20px;
+}
+.about{
+    padding: 50px;
+}
+.contact{
+    padding: 0px;
+}
