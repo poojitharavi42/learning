@@ -1,0 +1,7 @@
+class Dog:
+    species="Canis familiaris"
+    def __init__(self,name,color):
+        self.name=name
+        self.color=color
+dog1=Dog("Puppy","White")
+dog2=Dog("Jimmy","Brown")
