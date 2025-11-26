@@ -1,0 +1,37 @@
+class School:
+    school_name = "Eben-ezer-school"
+    principle = "pooja"
+    vice_principle = "Anurag"
+    library = {"ENGLISH":0,'MATHS':2}
+    no_of_staff = 18
+    
+    def __init__(self, name, rollno, std):
+        self.name = name
+        self.rollno = rollno
+        self.std = std
+        self.borrow_card = []
+
+    def borrow_book(self, book):
+        if book in self.borrow_card:
+            return f"you idiot {self.name} you have that book"
+        if School.library.get(book):
+            School.library[book] -= 1
+            self.borrow_card = [book]
+            return "borrowed success"
+        else:
+            return "book dosen't exist"
+
+    @classmethod 
+    def add_book_library(cls,book , quantity):
+        if book in cls.library.keys():
+            cls.library[book] += quantity
+        else:
+            cls.library[book] = quantity
+    @staticmethod
+    def display():
+        return "this is the best school"
+
+
+s1 = School("pooja", 1, 2)
+s2 = School("anurag", 2, 2)
+ 
