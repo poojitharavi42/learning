@@ -1,0 +1,29 @@
+class School():
+    sname = "eben ezer "
+    principle  = "poojitha"
+    v_principle = "jj"
+
+class Person(School):
+    def __init__(self, name, dob, reg_no, gender):
+        self.name = name
+        self.dob = dob
+        self.reg_no = reg_no
+        self.gender  = gender
+class Student(Person):
+    def __init__(self,name, dob, reg_no, gender, roll_no,
+                 div, standard):
+        super().__init__( name, dob, reg_no, gender)
+        self.roll_no = roll_no
+        self.div = div
+        self.standard = standard
+
+class Teacher(Person):
+    def __init__(self,name, dob, reg_no, gender, subject,
+                 class_Teacher):
+        super().__init__( name, dob, reg_no, gender)
+        self.subject = subject
+        self.class_Teacher = class_Teacher
+        
+        
+obj = Student("Anupooja", "12 - 4 - 2006" , 12231, 'f' , 12, "A", 5)
+
