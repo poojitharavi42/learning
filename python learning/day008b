@@ -1,0 +1,24 @@
+class Restaurant:
+    def __init__(self,name,location):
+        self.name=name
+        self.location=location
+    def restaurant_info(self):
+        print(f"Restaurant:{self.name},Location:{self.location}")
+class FastFoodRestaurant(Restaurant):
+    def __init__(self,name,location,special_item):
+        super().__init__(name,location)
+        self.special_item=special_item
+    def show_special(self):
+        print(f"Restaurant:{self.name},Location:{self.location}")
+        print(f"Special fast food:{self.special_item}")
+class LuxuryRestaurant(Restaurant):
+    def __init__(self,name,location,rating):
+        super().__init__(name,location)
+        self.rating=rating
+    def show_rating(self):
+        print( f"Restaurant:{self.name},Location:{self.location}")
+        print(f"Rating:{self.rating}/5")
+obj1=FastFoodRestaurant("KFC","Chennai","Zinger Burger")
+obj2=LuxuryRestaurant("Taj Hotel","Chennai","5")
+print(obj1.show_special())
+print(obj2.show_rating())
