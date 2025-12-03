@@ -1,0 +1,43 @@
+class Vehicle:
+    def __init__(self,vehicle_no,brand):
+        self.vehicle_no=vehicle_no
+        self.brand=brand
+
+        
+    def show_details(self):
+        return f"Vehicle Number:{self.vehicle_no},Brand:{self.brand}"
+        
+
+        
+class Car(Vehicle):
+    def __init__(self,vehicle_no,brand,num_seats,price_per_day):
+        super().__init__(vehicle_no,brand)
+        self.num_seats=num_seats
+        self.price_per_day=price_per_day
+
+        
+    def calculate_rent(self,days):
+        return days*self.price_per_day
+
+    
+class Bike(Vehicle):
+    def __init__(self,vehicle_no,brand,helmet_included,price_per_hour):
+        super().__init__(vehicle_no,brand)
+        self.helmet_included=helmet_included
+        self.price_per_hour=price_per_hour
+        
+    def calculate_rent(self,hours):
+        return hours*self.price_per_hour
+
+    
+car=Car("TN078646","Toyota",5,1500)
+bike=Bike("TN07839838","Yamaha",True,100)
+print(car.show_details())
+print("Seats:",car.num_seats)
+print("Car Rent for 3 days:",car.calculate_rent(3))
+print()
+print(bike.show_details())
+print("Helmet Included:","Yes" if bike.helmet_included else "No")
+print("Bike Rent for 6 hours:",bike.calculate_rent(6))
+
+
