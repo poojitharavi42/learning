@@ -1,0 +1,29 @@
+class Employee():
+    def __init__(self,name,id):
+        self.name=name
+        self.id=id
+    def display_employee(self):
+      print("Name:",self.name)
+      print("id:",self.id)
+class FullTimeEmployee(Employee):
+    def __init__(self,name,id,monthly_salary):
+        super().__init__(name,id)
+        self.monthly_salary=monthly_salary
+    def calculate_salary(self):
+        print(f"Name:{self.name},ID:{self.id}")
+        print(f"Monthly salary:{self.monthly_salary}")
+class PartTimeEmployee(Employee):
+    def __init__(self,name,id,hours_worked,hourly_rate):
+        super().__init__(name,id)
+        self.hours_worked=hours_worked
+        self.hourly_rate=hourly_rate
+    def calculate_salary(self):
+        a=f'''
+hours_worked-{self.hours_worked}*hourly_rate-{self.hourly_rate}
+'''
+        return a
+obj1=Employee("Poojitha",101)
+obj2=FullTimeEmployee("Anurag",102,45000)
+print(obj1.display_employee())
+print(obj2.calculate_salary())
+    

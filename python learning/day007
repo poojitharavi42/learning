@@ -1,17 +1,39 @@
-class Employee:
-    def __init__(self,name,salary):
-        self.name=name
-        self.salary=salary
-    def display_details(self):
-        print(f"Name:{self.name}")
-        print(f"Salary:{self.salary}")
-class Developer(Employee):
-    def __init__(self,name,salary,programming_language):
-        self.programming_language=programming_language
-    def display_details(self):
-        super().display_details()
-        print(f"Programming Language:{self.programming_language}")
-emp=Employee("Anurag",50000)
-dev=Developer("Poojitha",5000000,"Python")
-emp.display_details()
-dev.display_details()
+class School():
+    sname = "eben ezer "
+    principle  = "poojitha"
+    v_principle = "jj"
+
+class Person(School):
+    def __init__(self, name, dob, reg_no, gender):
+        self.name = name
+        self.dob = dob
+        self.reg_no = reg_no
+        self.gender  = gender
+
+    def details(self):
+        a = f'''name - {self.name}
+Date of birth - {self.dob}
+reg_no - {self.reg_no}
+gender - {self.gender}
+'''
+        return a
+
+class Student(Person):
+    def __init__(self,name, dob, reg_no, gender, roll_no,
+                 div, standard):
+        super().__init__( name, dob, reg_no, gender)
+        self.roll_no = roll_no
+        self.div = div
+        self.standard = standard
+
+def Teacher(Person):
+    def __init__(self,name, dob, reg_no, gender, subject,
+                 class_Teacher):
+        super().__init__( name, dob, reg_no, gender)
+        self.subject = subject
+        self.class_Teacher = class_Teacher
+        
+        
+obj = Student("Anupooja", "12 - 4 - 2006" , 12231, 'f' , 12, "A", 5)
+
+
