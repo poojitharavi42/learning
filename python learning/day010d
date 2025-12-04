@@ -1,0 +1,47 @@
+class Order:
+    def __init__(self,order_id,customer_name):
+        self.order_id=order_id
+        self.customer_name=customer_name
+
+    def show_details(self):
+        return" Order ID:{self.order_id},Customer name:{self.customer_name}"
+
+class FoodOrder(Order):
+    def __init__(self,order_id,customer_name,food_item,price):
+        super().__init__(order_id,customer_name)
+        self.food_item=food_item
+        self.price=price
+
+    def show_details(self):
+        a='''
+Order ID:{self.order_id}
+customer ID:{self.customer_name}
+food item:{self.food_item}
+Price:{self.price}
+'''
+        return a
+
+class GroceryOrder(Order):
+    def __init__(self,order_id,customer_name,item_list,total_weight):
+        super().__init__(order_id,customer_name)
+        self.item_list=item_list
+        self.total_weight=total_weight
+
+
+    def show_details(self):
+        b='''
+Order ID:{self.order_id}
+Customer ID:{self.customer_name}
+List of grocery items:{self.item_list}
+total weight:{self.total_weight}
+'''
+        return b
+
+
+obj1=FoodOrder("501","Poojitha","Pizza","250")
+obj2=GroceryOrder("802","Anurag","['Milk','Rice','Sugar']","5kg")
+print(obj1.show_details())
+print(obj2.show_details())
+
+
+
