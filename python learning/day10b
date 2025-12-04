@@ -1,0 +1,15 @@
+class Vehicle:
+    def start(self):
+        return"Vehicle is starting"
+class Car(Vehicle):
+    def start(self):
+        return "Car is starting"
+class Bike(Vehicle):
+    def start(self):
+        return "Bike is starting"
+v=Vehicle()
+c=Car()
+b=Bike()
+print(v.start())
+print(c.start())
+print(b.start())
