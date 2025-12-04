@@ -1,0 +1,7 @@
+class Shopping:
+    def total_bill(self,item1,item2=0,item3=0):
+        return item1+item2+item3
+s=Shopping()
+print(s.total_bill(10))
+print(s.total_bill(10,20))
+print(s.total_bill(10,20,30))
