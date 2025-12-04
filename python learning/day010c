@@ -1,0 +1,14 @@
+class UPI:
+    def pay(self):
+        return "Paid using UPI"
+class Card:
+    def pay(self):
+        return "Paid using Debit Card/Credit Card"
+class Cash:
+    def pay(self):
+        return "Paid using Cash"
+def make_payment(payment_method):
+    print(payment_method.pay())
+make_payment(UPI())
+make_payment(Card())
+make_payment(Cash())
