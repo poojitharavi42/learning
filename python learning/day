@@ -1,0 +1,35 @@
+class BankAccount:
+    def __init__(self, name, balance):
+        self.name = name
+        self.balance = balance
+
+    def calculate_interest(self):
+        # Base method (will be overridden)
+        return 0
+
+
+class SavingsAccount(BankAccount):
+    def calculate_interest(self):
+        return self.balance * 0.05   # 5% interest
+
+
+class CurrentAccount(BankAccount):
+    def calculate_interest(self):
+        return self.balance * 0.03   # 3% interest
+
+
+class FixedDepositAccount(BankAccount):
+    def calculate_interest(self):
+        return self.balance * 0.07   # 7% interest
+
+
+# List of mixed account objects
+accounts = [
+    SavingsAccount("Alice", 50000),
+    CurrentAccount("Bob", 40000),
+    FixedDepositAccount("Charlie", 100000)
+]
+
+# Polymorphic loop
+for acc in accounts:
+    print(f"{acc.name} - Interest: {acc.calculate_interest()}")
