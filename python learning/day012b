@@ -1,0 +1,14 @@
+class Box:
+    def __init__(self,volume):
+        self.volume=volume
+
+    def __lt__(self,other):
+        return self.volume<other.volume
+
+    def __eq__(self,other):
+        return self.volume==other.volume
+
+b1=Box(400)
+b2=Box(500)
+print(b1<b2)
+print(b1==b2)
