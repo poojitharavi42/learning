@@ -1,0 +1,20 @@
+class Animal:
+    def make_sound(self):
+        pass
+
+class Dog(Animal):
+    def make_sound(self):
+        print("Dog: Woof Woof")
+
+class Cat(Animal):
+    def make_sound(self):
+        print("Cat: Meow Meow")
+
+class Cow(Animal):
+    def make_sound(self):
+        print("Cow: Moo Moo")
+
+animals = [Dog(), Cat(), Cow()]
+
+for a in animals:
+    a.make_sound()
