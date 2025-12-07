@@ -1,0 +1,25 @@
+class Payment:
+    def make_payment(self, amount):
+        pass
+
+class CardPayment(Payment):
+    def make_payment(self, amount):
+        print(f"Paid ₹{amount} using Card.")
+
+class UPIPayment(Payment):
+    def make_payment(self, amount):
+        print(f"Paid ₹{amount} using UPI.")
+
+class CashPayment(Payment):
+    def make_payment(self, amount):
+        print(f"Paid ₹{amount} in Cash.")
+
+# Polymorphism in action
+payments = [
+    CardPayment(),
+    UPIPayment(),
+    CashPayment()
+]
+
+for method in payments:
+    method.make_payment(500)
