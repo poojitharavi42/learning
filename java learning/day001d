@@ -1,0 +1,56 @@
+package easyproblems;
+//Write the java code for sum of digits 
+public class EasySolving {
+	public static int sumOfDigits(int i) {
+		int sum=0;
+		while(i>0) {
+			int digit=i%10;
+			sum+=digit;
+			i=i/10;	
+		}
+		return sum;	
+	}
+	//write java program to print the find even or odd
+	public static int isEvenOrOdd(int n) {
+		if(n%2==0) 
+			System.out.println("Even");
+		else 
+			System.out.println("Odd");
+		return n;
+	}
+	//write a java program to find the largest number
+	public static int isLargest(int a,int b) {
+		if(a>b) {
+			System.out.println("The first number is greater than second number");
+			return a;
+		}
+		else {
+			System.out.println("The second number is greater than first number");
+			return b;
+		}
+			
+	}
+	//write a java program to reverse a given number
+	public static int reverse(int i) {
+		int rev=0;
+		while(i!=0) {
+			int d=i%10;
+			rev= rev*10+d;
+			i=i/10;	
+		}
+		return rev;	
+	}
+     public static void main(String[] args) {
+    	 int res=sumOfDigits(1234);
+    	 System.out.println("Final result:"+res ); 
+    	 int num=isEvenOrOdd(4);
+    	 System.out.println("Number is:" + num);
+    	 int largest=isLargest(45,27);
+    	 System.out.println("The Largest Number is:" + largest);
+    	 System.out.println(reverse(1234));
+	}
+     
+		
+	
+
+}
