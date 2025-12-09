@@ -1,0 +1,28 @@
+package pkg1;
+import java.util.Scanner;
+public class Rectangular {
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the number1:");
+		System.out.println("Enter the number2:");
+		int a=s.nextInt();
+		int b=s.nextInt();
+		System.out.println("Hello");
+		if(a==b) {
+			System.out.println("They are eligible");
+			
+		}
+		else if(a!=b) {
+			int res=a>b?a:b;
+			System.out.println(res);
+			
+		}
+		System.out.println("Thank You");
+		
+		
+		
+			
+		
+	}
+
+}
