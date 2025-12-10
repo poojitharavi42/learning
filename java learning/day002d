@@ -1,0 +1,24 @@
+package programs;
+public class Sweth{
+
+//write a code to print sum of first n numbers
+	public static int sumOfFistnNumbers(int n) {
+		int sum=0;
+		for(int i=1;i<=n;i++) {
+			sum+=i;	
+		}
+		System.out.println("The sum of first n natural b/w 1 and 5:"+ sum);
+		return n;
+	}
+	//write a code to print sum of even numbers from 1 to n
+	public static int sumOfEvenNumbers(int n) {
+		int sum=0;
+		for(int i=1;i<=n;i++) {
+			if(i%2==0)
+			sum+=i;	
+		}
+		System.out.println("The sum of first n natural :" + sum);
+		return n;
+		
+	}
+}
