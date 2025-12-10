@@ -1,0 +1,25 @@
+package pkg1;
+
+public class Execution {
+	//write a code to check if the number is plaindrome or not
+	static boolean isPalindrome(int n) {
+		int temp=n;
+		int rev=0;
+		while(n!=0) {
+			int digit=n%10;
+			rev=rev*10+digit;
+			n=n/10;
+		}
+		return rev==temp;//returns true or false
+	}
+	public static void main(String[] args) {
+		int number=244;
+		if(isPalindrome(number)) {
+			System.out.println(number + "is a palindrome");
+		}
+		else {
+			System.out.println(number + "is not a palindrome");
+			
+		}
+	}
+}
