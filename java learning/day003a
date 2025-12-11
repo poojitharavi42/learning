@@ -1,0 +1,34 @@
+package programs;
+
+import java.util.Scanner;
+
+public class medium {
+	public static boolean isArmstrong(int n){
+		int temp=n;
+		int count=0;
+		while(temp>0) {
+			count++;
+			temp=temp/10;
+		}
+		temp=n;
+		int sum=0;
+		while(temp>0) {
+			int digit=temp%10;
+			sum+=digit;
+			temp/=10;
+		}
+		return temp==sum;
+	}
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		while(t>0) {
+			int x=sc.nextInt();
+			if(isArmstrong(x))
+				System.out.println("Armstrong" + x);
+			else
+				System.out.println("Not an Armstrong" + x);
+		}
+		sc.close();
+	}
+}
