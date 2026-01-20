@@ -1,0 +1,25 @@
+package Mini;
+import java.util.Scanner;
+public class MadLabsGame {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter adj1:");
+		
+		String adj1=sc.nextLine();
+		System.out.println("Enter verb:");
+		
+		String verb=sc.nextLine();
+		System.out.println("Enter noun:");
+		
+		String noun=sc.nextLine();
+		System.out.println("Enter verb2:");
+		
+		String verb2=sc.nextLine();
+		
+		System.out.println("I saw a "   +  adj1  +   " girl in park.");
+		System.out.println("There she is taking "  +  verb  +   " with her bf");
+		System.out.println("Then she went to  "  +  noun  +" with her bf.");
+		System.out.println("There she " +  verb2  + ".");
+	}
+
+}
