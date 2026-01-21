@@ -1,0 +1,15 @@
+package Encapsulation;
+
+public class PersonsAge {
+	private int age;
+	
+	public void setAge(int a) {
+		if(a>0) {
+			System.out.println("My age is:" + a);
+		}
+	}
+	
+	public int getAge() {
+		return age;
+	}
+}
