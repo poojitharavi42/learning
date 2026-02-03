@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+</head>
+<body>
+    <script>
+        let name='Poojitha';
+        console.log(`My name is: ${name}`);
+        const cofee=5;
+        const bagels=3;
+        const soup=9;
+        const cofeeQnt=1;
+        const bagelsQnt=2;
+        const soupQnt=1;
+        let cost=cofee*cofeeQnt+bagels*bagelsQnt+soup*soupQnt;
+        console.log(`Cost of food:$${cost}`);
+        let tax=cost*0.1;
+        console.log(`Tax(10%) : $${tax}`);
+        let totalCost=cost+tax;
+        console.log(`Total cost:$${totalCost}`);
+
+    </script>
+</body>
+</html>
