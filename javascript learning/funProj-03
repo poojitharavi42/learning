@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function milesToKm(m){
+            return (m*1.6);
+        }
+        function kmToMiles(k){
+            return (k/1.6);
+        }
+        function kmToKm(kk){
+            return kk;
+        }
+        function convertLength(length,from,to){
+            if(from === 'miles' && to === 'km'){
+                return (`${milesToKm}km`);
+            }
+            elif(from === 'km' && to === 'miles'){
+                return (`${kmToMiles}miles`);
+            }
+            elif(from === 'km' && to === 'km'){
+                return (`${kmToKm}km`);
+            }
+
+        }
+        convertLength(50,'miles','km');
+        convertLength(32,'km','miles');
+        convertLength(50,'km','km');
+    </script>
+</body>
+</html>
