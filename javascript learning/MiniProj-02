@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isAttendance(time){
+            if(time<=9.00){
+                console.log('On time');
+            }else if(time>9.00 && time<9.30){
+                console.log('Late.');
+            }else{
+                console.log('Half day.');
+            }
+        }
+        isAttendance(10.00);
+    </script>
+</body>
+</html>
