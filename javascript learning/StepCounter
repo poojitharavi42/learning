@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="
+        stepCounter()
+        ">Walk</button>
+    <script>
+    let walk=JSON.parse(localStorage.getItem('walk'))
+//localStorage.getItem('walk') returns null
+    if(!walk){
+        walk={
+            step:0
+        };
+    }
+    function stepCounter(){
+        walk.step++;
+        console.log(walk.step);
+
+        localStorage.setItem('walk',JSON.stringify(walk));
+    }
+
+
+
+    </script>
+</body>
+</html>
