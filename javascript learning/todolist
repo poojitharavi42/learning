@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Loops</title>
+</head>
+<body>
+    <p>Todo List</p>
+    <input placeholder="Todo name"
+    class="js-name-input">
+    <button onclick="
+    addTodo();
+    ">Add</button>
+
+    <div class="js-todo-list"></div>
+    
+    <script>
+        const todo=['make dinner','wash dishes'];
+
+        rendertodoList();
+
+        function rendertodoList(){
+        let todoHTML='';
+
+        for(let i = 0;i < todo.length;i++){
+            const to=todo[i];
+            const html=`<p>${to}</p>`;
+            todoHTML +=html;
+        }
+        console.log(todoHTML);
+
+        document.querySelector('.js-todo-list')
+        .innerHTML=todoHTML;
+    }
+        function addTodo(){
+            const inputElement = document.querySelector('.js-name-input');
+            const name = inputElement.value;
+
+            todo.push(name);
+            console.log(todo);
+
+            inputElement.value='';
+            rendertodoList()
+
+        }
+    </script>
+
+    
+</body>
+</html>
